@@ -4,7 +4,7 @@
   font-weight: bold;
   src: url("font/DancingScript-SemiBold.ttf") format('truetype');
 }
-header {
+.top {
   width: 100%;
   background-image: url(img/header.jpg);
   background-repeat: no-repeat;
@@ -12,13 +12,13 @@ header {
   background-size: 100% auto;
   background-color: #000000;
 }
-header nav {
+.top nav {
   display: inline-block;
 }
-header nav li {
+.top nav li {
   display: inline-block;
 }
-header img {
+.top img {
   display: inline-block;
 }
 .head {
@@ -72,17 +72,13 @@ header img {
   font-size: 15px;
 }
 .about {
-  overflow: hidden;
-  width: 960px;
-  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .about .skill {
-  float: left;
   box-sizing: border-box;
   width: 240px;
-  padding: 10px;
-  padding-bottom: 10000px;
-  margin-bottom: -10000px;
   margin-right: 10px;
   background-image: linear-gradient(to bottom right, #fff8dc, rgba(255, 248, 220, 0));
 }
@@ -101,11 +97,8 @@ header img {
   height: 20px;
 }
 .about .experience {
-  float: right;
   box-sizing: border-box;
   width: 710px;
-  padding-bottom: 10000px;
-  margin-bottom: -10000px;
   background-image: linear-gradient(to bottom right, #fff8dc, rgba(255, 248, 220, 0));
 }
 .about .experience nav ul {
@@ -147,4 +140,58 @@ header img {
 }
 .about .show {
   display: block;
+}
+.odd {
+  background-image: linear-gradient(to bottom right, #fff8dc, rgba(255, 248, 220, 0));
+}
+.post .content {
+  /*display: inline-block;
+        position: relative;
+        left: 50%;
+        margin-left: -480px;
+        width: 960px;*/
+  width: 100%;
+  display: inline-grid;
+  grid-template-areas: "...  ...      header ...   rightside  ..." "...  leftside main   ...   rightside  ..." "...  ...      footer ...   rightside  ...";
+  grid-template-columns: calc((50% - 480px)) 150px 810px 20px minmax(0, 400px) 1fr;
+  font-size: 18px;
+}
+.post .content header {
+  grid-row: header / header;
+  grid-column: header / header;
+  position: relative;
+}
+.post .content header h1 {
+  display: inline-block;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 900;
+}
+.post .content header time {
+  position: absolute;
+  right: 0;
+}
+.post .content .logoside {
+  grid-row: leftside / leftside;
+  grid-column: leftside / leftside;
+  margin-right: 20px;
+}
+.post .content .logoside img {
+  width: 150px;
+  height: 150px;
+}
+.post .content main {
+  grid-row: main / main;
+  grid-column: main / main;
+}
+.post .content footer {
+  grid-row: footer / footer;
+  grid-column: footer / footer;
+}
+.post .content .demoside {
+  grid-row: rightside / rightside;
+  grid-column: rightside / rightside;
+}
+.post .content .demoside img {
+  width: 100%;
 }

@@ -3,7 +3,6 @@ var edu = document.getElementsByClassName("education")[0];
 var work = document.getElementsByClassName("work")[0];
 tab.addEventListener("click", function(event) {
     let target = event.target;
-    console.log(target);
     if (target.innerText === "教育经历") { //点击“教育经历”
         let workP = tab.children[1].children[0];
         if (!target.matches(".choose")) {
@@ -34,4 +33,3 @@ tab.addEventListener("click", function(event) {
         }
     }
 }, false);
-//console.log(tab.children.indexOf("li"));

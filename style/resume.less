@@ -7,7 +7,7 @@
 @content: 960px;
 @distance: 10px auto;
 @clear: 0;
-header {
+.top {
     width: 100%;
     nav {
         display: inline-block;
@@ -75,14 +75,12 @@ header {
     background-image: linear-gradient(to bottom right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0)); 
 }
 .about {
-    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     .skill {
-        float: left;
         box-sizing: border-box;
         width: 240px;
-        padding: 10px;
-        padding-bottom: 10000px;
-        margin-bottom: -10000px;
         margin-right: 10px;
         background-image: linear-gradient(to bottom right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0)); 
 
@@ -104,11 +102,8 @@ header {
         }
     }
     .experience {
-        float: right;
         box-sizing: border-box;
         width: 710px;
-        padding-bottom: 10000px;
-        margin-bottom: -10000px;
         background-image: linear-gradient(to bottom right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0)); 
 
         nav {
@@ -154,7 +149,69 @@ header {
     .show {
         display: block;
     }
-    width: @content;
-    margin: @distance;
 }
+.odd {
+    background-image: linear-gradient(to bottom right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0)); 
+}
+.post {
+    .content {
+        /*display: inline-block;
+        position: relative;
+        left: 50%;
+        margin-left: -480px;
+        width: 960px;*/
+        width: 100%;
+        display: inline-grid;
+        grid-template-areas:
+            "...  ...      header ...   rightside  ..."
+            "...  leftside main   ...   rightside  ..."
+            "...  ...      footer ...   rightside  ...";
+        grid-template-columns: calc(~"(50% - 480px)") 150px 810px 20px minmax(0, 400px) 1fr;
+        font-size: 18px;
+        header {
+            grid-row: header / header;
+            grid-column: header / header;
+            position: relative;
+            h1 {
+                display: inline-block;
+                margin: @clear;
+                font-size: 50px;
+                font-weight: 900;
+            }
+            time {
+                position: absolute;
+                right: 0;
+                
+            }
+        }
+        .logoside {
+            grid-row: leftside / leftside;
+            grid-column: leftside / leftside;
+            margin-right: 20px;
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        main {
+            grid-row: main / main;
+            grid-column: main /main;
+        }
+        footer {
+            grid-row: footer / footer;
+            grid-column: footer / footer;
+        }
+        .demoside {
+            grid-row: rightside / rightside;
+            grid-column: rightside / rightside;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
 
