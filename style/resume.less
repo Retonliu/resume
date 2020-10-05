@@ -151,7 +151,7 @@
     }
 }
 .odd {
-    background-image: linear-gradient(to bottom right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0)); 
+    background-image: linear-gradient(to right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0.4)); 
 }
 .about + section {
     margin-top: 15px;
@@ -211,7 +211,7 @@
     flex-flow: row nowrap;
     width: @content;
     height: 370px;
-    margin: @distance;
+    margin: 20px auto;
     .set {
         display: inline-flex;
         flex-flow: row wrap;
@@ -295,8 +295,62 @@
         }
     }
     .comment {
+        box-sizing: border-box;
         width: 320px;
+        padding: 10px;
         margin-left: 10px;
+        background-image: linear-gradient(to bottom, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0));
+        h1 {
+            margin: @clear;
+            text-align: center;
+            font-size: 22px;
+        }
+        #content {
+            overflow: auto;
+            margin-top: 6px;
+            height: 60%;
+            border: 1px solid #4682B4;
+            .oddComment {
+                display: grid;
+                grid-template-areas: 
+                        "pitcture para"
+                        "name     para";
+                grid-template-columns: 40px 1fr;
+                grid-template-rows: 40px 1fr;
+            }
+            .evenComment {
+                display: grid;
+                grid-template-areas: 
+                        "para pitcture"
+                        "para name";
+                grid-template-columns: 1fr 40px;
+                grid-template-rows: 1fr 40px;
+            }
+            img {
+                    grid-column: pitcture / pitcture;
+                    grid-row: pitcture / pitcture;
+                    width: 40px;
+                    height: 40px;
+                    margin: @clear;
+                }
+                .name {
+                    grid-column: name / name;
+                    grid-row: name / name;
+                    margin: @clear;
+                    font-size: 10px;
+                }
+                .text {
+                    grid-column: para / para;
+                    grid-row: para / para;
+                    text-align: center;
+                    font-size: 18px;
+                }
+        }
+        .operation {
+            input[placeholder="留言内容"] {
+                width: 100%;
+            }
+        }
     }
 }
 .foot {
@@ -307,6 +361,7 @@
     .copyright {
         width: @content;
         margin: @distance;
+        font-family: "DancingScript";
         color: #ffffff;
         text-align: center;
     }

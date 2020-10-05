@@ -142,7 +142,7 @@
   display: block;
 }
 .odd {
-  background-image: linear-gradient(to bottom right, #fff8dc, rgba(255, 248, 220, 0));
+  background-image: linear-gradient(to right, #fff8dc, rgba(255, 248, 220, 0.4));
 }
 .about + section {
   margin-top: 15px;
@@ -199,7 +199,7 @@
   flex-flow: row nowrap;
   width: 960px;
   height: 370px;
-  margin: 15px auto;
+  margin: 20px auto;
 }
 .bottom .set {
   display: inline-flex;
@@ -283,7 +283,56 @@
   background-image: url(img/spaceShip.png);
 }
 .bottom .comment {
-  width: 330px;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 10px;
+  margin-left: 10px;
+  background-image: linear-gradient(to bottom, #fff8dc, rgba(255, 248, 220, 0));
+}
+.bottom .comment h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+}
+.bottom .comment #content {
+  overflow: auto;
+  margin-top: 6px;
+  height: 60%;
+  border: 1px solid #4682B4;
+}
+.bottom .comment #content .oddComment {
+  display: grid;
+  grid-template-areas: "pitcture para" "name     para";
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 40px 1fr;
+}
+.bottom .comment #content .evenComment {
+  display: grid;
+  grid-template-areas: "para pitcture" "para name";
+  grid-template-columns: 1fr 40px;
+  grid-template-rows: 1fr 40px;
+}
+.bottom .comment #content img {
+  grid-column: pitcture / pitcture;
+  grid-row: pitcture / pitcture;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+.bottom .comment #content .name {
+  grid-column: name / name;
+  grid-row: name / name;
+  margin: 0;
+  font-size: 10px;
+}
+.bottom .comment #content .text {
+  grid-column: para / para;
+  grid-row: para / para;
+  text-align: center;
+  font-size: 18px;
+}
+.bottom .comment .operation input[placeholder="留言内容"] {
+  width: 100%;
 }
 .foot {
   width: 100%;
@@ -294,6 +343,7 @@
 .foot .copyright {
   width: 960px;
   margin: 15px auto;
+  font-family: "DancingScript";
   color: #ffffff;
   text-align: center;
 }
