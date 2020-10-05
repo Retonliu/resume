@@ -144,54 +144,52 @@
 .odd {
   background-image: linear-gradient(to bottom right, #fff8dc, rgba(255, 248, 220, 0));
 }
-.post .content {
-  /*display: inline-block;
-        position: relative;
-        left: 50%;
-        margin-left: -480px;
-        width: 960px;*/
+.about + section {
+  margin-top: 10px;
+}
+.about + section .post {
   width: 100%;
   display: inline-grid;
   grid-template-areas: "...  ...      header ...   rightside  ..." "...  leftside main   ...   rightside  ..." "...  ...      footer ...   rightside  ...";
   grid-template-columns: calc((50% - 480px)) 150px 810px 20px minmax(0, 400px) 1fr;
   font-size: 18px;
 }
-.post .content header {
+.about + section .post header {
   grid-row: header / header;
   grid-column: header / header;
   position: relative;
 }
-.post .content header h1 {
+.about + section .post header h1 {
   display: inline-block;
   margin: 0;
   font-size: 50px;
   font-weight: 900;
 }
-.post .content header time {
+.about + section .post header time {
   position: absolute;
   right: 0;
 }
-.post .content .logoside {
+.about + section .post .logoside {
   grid-row: leftside / leftside;
   grid-column: leftside / leftside;
   margin-right: 20px;
 }
-.post .content .logoside img {
-  width: 150px;
-  height: 150px;
+.about + section .post .logoside img {
+  width: 100px;
+  height: 100px;
 }
-.post .content main {
+.about + section .post main {
   grid-row: main / main;
   grid-column: main / main;
 }
-.post .content footer {
+.about + section .post footer {
   grid-row: footer / footer;
   grid-column: footer / footer;
 }
-.post .content .demoside {
+.about + section .post .demoside {
   grid-row: rightside / rightside;
   grid-column: rightside / rightside;
 }
-.post .content .demoside img {
+.about + section .post .demoside img {
   width: 100%;
 }

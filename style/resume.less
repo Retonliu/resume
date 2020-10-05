@@ -153,13 +153,9 @@
 .odd {
     background-image: linear-gradient(to bottom right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0)); 
 }
-.post {
-    .content {
-        /*display: inline-block;
-        position: relative;
-        left: 50%;
-        margin-left: -480px;
-        width: 960px;*/
+.about + section {
+    margin-top: 10px;
+    .post {
         width: 100%;
         display: inline-grid;
         grid-template-areas:
@@ -181,7 +177,6 @@
             time {
                 position: absolute;
                 right: 0;
-                
             }
         }
         .logoside {
@@ -189,8 +184,8 @@
             grid-column: leftside / leftside;
             margin-right: 20px;
             img {
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
             }
         }
         main {
