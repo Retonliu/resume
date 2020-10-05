@@ -210,9 +210,61 @@
   background-image: linear-gradient(to bottom, #fff8dc, rgba(255, 248, 220, 0));
 }
 .bottom .set .info {
+  position: relative;
   width: 150px;
   height: 180px;
   background-color: #BBFFFF;
+}
+.bottom .set .info footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #CD3333;
+}
+.bottom .set .info footer p {
+  margin: 0;
+}
+.bottom .set .info footer p + div {
+  cursor: pointer;
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+.bottom .set .info footer p + div .disc1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #CD3333;
+}
+.bottom .set .info footer p + div .disc2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #CD3333;
+}
+.bottom .set .info footer p + div .square {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin-left: -4.5px;
+  margin-top: -4.5px;
+  transform: rotate(45deg);
+  background-color: #CD3333;
+}
+.bottom .set .info footer p + div:active {
+  transform: scale(1.5);
 }
 .bottom .set .info:nth-child(1) {
   background-size: 100% 100%;

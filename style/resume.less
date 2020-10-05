@@ -220,9 +220,62 @@
         width: 630px;
         background-image: linear-gradient(to bottom, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0));
         .info {
+            position: relative;
             width: 150px;
             height: 180px;
             background-color:#BBFFFF;
+            footer {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                bottom: 5px;
+                font-size: 15px;
+                font-weight: 600;
+                color: #CD3333;
+                p {
+                    margin: @clear;
+                }
+                p + div {
+                    cursor: pointer;
+                    position: relative;
+                    width: 15px;
+                    height: 15px;
+                    //border: solid 1px #CD3333;
+                    .disc1 {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        background-color: #CD3333;
+                    }
+                    .disc2 {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        background-color: #CD3333;
+                    }
+                    .square {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 9px;
+                        height: 9px;
+                        margin-left: -4.5px;
+                        margin-top: -4.5px;
+                        transform: rotate(45deg);
+                        background-color: #CD3333;
+                    }
+                }
+                p + div:active {
+                    transform: scale(1.5);
+                }
+            }
         }
         .info:nth-child(1) {
             background-size: 100% 100%;
@@ -242,7 +295,8 @@
         }
     }
     .comment {
-        width: 330px;
+        width: 320px;
+        margin-left: 10px;
     }
 }
 .foot {
@@ -257,3 +311,4 @@
         text-align: center;
     }
 }
+
