@@ -5,7 +5,7 @@
     src: url("font/DancingScript-SemiBold.ttf") format('truetype');
 }   
 @content: 960px;
-@distance: 10px auto;
+@distance: 15px auto;
 @clear: 0;
 .top {
     width: 100%;
@@ -154,7 +154,7 @@
     background-image: linear-gradient(to bottom right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0)); 
 }
 .about + section {
-    margin-top: 10px;
+    margin-top: 15px;
     .post {
         width: 100%;
         display: inline-grid;
@@ -201,12 +201,59 @@
             grid-column: rightside / rightside;
             img {
                 width: 100%;
+                height: 100%;
             }
         }
     }
 }
-
-
-
-
-
+.bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    width: @content;
+    height: 370px;
+    margin: @distance;
+    .set {
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: space-between;
+        width: 630px;
+        background-image: linear-gradient(to bottom, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0));
+        .info {
+            width: 150px;
+            height: 180px;
+            background-color:#BBFFFF;
+        }
+        .info:nth-child(1) {
+            background-size: 100% 100%;
+            background-image: url(img/fold.png);
+        }
+        .info:nth-child(2) {
+            background-size: 100% 100%;
+            background-image: url(img/form.png);
+        }
+        .info:nth-child(4) {
+            background-size: 100% 100%;
+            background-image: url(img/snake.png);
+        }
+        .info:nth-child(6) {
+            background-size: 100% 100%;
+            background-image: url(img/spaceShip.png);
+        }
+    }
+    .comment {
+        width: 330px;
+    }
+}
+.foot {
+    width: 100%;
+    height: 170px;
+    margin-top: 15px;
+    background-color: #000000;
+    .copyright {
+        width: @content;
+        margin: @distance;
+        color: #ffffff;
+        text-align: center;
+    }
+}
