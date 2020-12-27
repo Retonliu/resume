@@ -141,6 +141,10 @@
         }
         .work {
             padding: 40px;
+            font-size: 18px;
+            p {
+                margin: 15px 0;
+            }
         }
     }
     .hide {
@@ -150,10 +154,10 @@
         display: block;
     }
 }
-.odd {
+/*.odd {
     background-image: linear-gradient(to right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0.4)); 
-}
-.about + section {
+}*/
+.post-wrap {
     margin-top: 15px;
     .post {
         width: 100%;
@@ -205,7 +209,11 @@
             }
         }
     }
+    .post:nth-child(odd) {
+        background-image: linear-gradient(to right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0.4)); 
+    }
 }
+
 .bottom {
     display: flex;
     flex-flow: row nowrap;

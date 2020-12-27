@@ -134,6 +134,10 @@
 }
 .about .experience .work {
   padding: 40px;
+  font-size: 18px;
+}
+.about .experience .work p {
+  margin: 15px 0;
 }
 .about .hide {
   display: none;
@@ -141,13 +145,13 @@
 .about .show {
   display: block;
 }
-.odd {
-  background-image: linear-gradient(to right, #fff8dc, rgba(255, 248, 220, 0.4));
-}
-.about + section {
+/*.odd {
+    background-image: linear-gradient(to right, rgba(255, 248, 220, 1), rgba(255, 248, 220, 0.4)); 
+}*/
+.post-wrap {
   margin-top: 15px;
 }
-.about + section .post {
+.post-wrap .post {
   width: 100%;
   margin: 10px;
   display: inline-grid;
@@ -155,44 +159,47 @@
   grid-template-columns: calc((50% - 480px)) 150px 810px 20px minmax(0, 400px) 1fr;
   font-size: 18px;
 }
-.about + section .post header {
+.post-wrap .post header {
   grid-row: header / header;
   grid-column: header / header;
   position: relative;
 }
-.about + section .post header h1 {
+.post-wrap .post header h1 {
   display: inline-block;
   margin: 0;
   font-size: 50px;
   font-weight: 900;
 }
-.about + section .post header time {
+.post-wrap .post header time {
   position: absolute;
   right: 0;
 }
-.about + section .post .logoside {
+.post-wrap .post .logoside {
   grid-row: leftside / leftside;
   grid-column: leftside / leftside;
   margin-right: 20px;
 }
-.about + section .post .logoside img {
+.post-wrap .post .logoside img {
   width: 100px;
   height: 100px;
 }
-.about + section .post main {
+.post-wrap .post main {
   grid-row: main / main;
   grid-column: main / main;
 }
-.about + section .post footer {
+.post-wrap .post footer {
   grid-row: footer / footer;
   grid-column: footer / footer;
 }
-.about + section .post .demoside {
+.post-wrap .post .demoside {
   grid-row: rightside / rightside;
   grid-column: rightside / rightside;
 }
-.about + section .post .demoside img {
+.post-wrap .post .demoside img {
   width: 100%;
+}
+.post-wrap .post:nth-child(odd) {
+  background-image: linear-gradient(to right, #fff8dc, rgba(255, 248, 220, 0.4));
 }
 .bottom {
   display: flex;

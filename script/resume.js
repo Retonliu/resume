@@ -6,7 +6,7 @@ var btn = document.getElementsByTagName("button")[0];
 var userText = document.getElementById("userText");
 var userName = document.getElementById("userName");
 var index = 1;
-tab.addEventListener("click", function(event) {
+tab.addEventListener("mouseover", function(event) {
     let target = event.target;
     if (target.innerText === "教育经历") { //点击“教育经历”
         let workP = tab.children[1].children[0];
